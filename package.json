@@ -1,0 +1,29 @@
+{
+  "name": "airtable-metadata",
+  "version": "1.0.0",
+  "description": "Airtable Metadata API Client",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xavivaldes/airtable-metadata.git"
+  },
+  "keywords": [
+    "Airtable",
+    "Schema",
+    "Metadata",
+    "API"
+  ],
+  "author": "Xavi Valdes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xavivaldes/airtable-metadata/issues"
+  },
+  "homepage": "https://github.com/xavivaldes/airtable-metadata#readme",
+  "dependencies": {
+    "node-fetch": "^3.2.10"
+  }
+}
