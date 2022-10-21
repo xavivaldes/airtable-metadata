@@ -68,7 +68,7 @@ class Base {
     fields = [{ type: 'singleLineText', name: 'name' }],
     ...ops
   }) {
-    const service = this.service.r('table');
+    const service = this.service.r('tables');
     return service
       .create({ name, fields, ...ops })
       .then((s) => new Table(s, service));
