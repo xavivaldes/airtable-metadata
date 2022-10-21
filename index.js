@@ -66,15 +66,12 @@ class Base {
   async createTable({
     name,
     fields = [{ type: 'singleLineText', name: 'name' }],
+    ...ops
   }) {
-    return new Table(
-      await performCall({
-        operation: `bases/${this.schema.id}/tables`,
-        method: 'POST',
-        body: { name, fields },
-      }),
-      this.schema.id
-    );
+    const service = this.service.r('table');
+    return service
+      .create({ name, fields, ...ops })
+      .then((s) => new Table(s, service));
   }
 }
 
