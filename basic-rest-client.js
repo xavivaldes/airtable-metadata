@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
 
 class Service {
   constructor({ client, operation }) {
@@ -49,7 +49,7 @@ class Service {
   }
 }
 
-export class Client {
+class Client {
   constructor({ endpoint, headers }) {
     this.endpoint = endpoint;
     this.headers = headers;
@@ -81,3 +81,5 @@ export class Client {
     return new Service({ client: this, operation: serviceName });
   }
 }
+
+module.exports.Client = Client;

@@ -1,4 +1,4 @@
-import { Client } from './basic-rest-client.js';
+const { Client } = require('./basic-rest-client.js');
 
 const AIRTABLE_API_KEY = process.env.AIRTABLE_API_KEY;
 const AIRTABLE_ENDPOINT = 'https://api.airtable.com';
@@ -78,7 +78,7 @@ class Base {
   }
 }
 
-export class AirtableMetadata {
+class AirtableMetadata {
   constructor({
     endpoint = AIRTABLE_ENDPOINT,
     service = AIRTABLE_SERVICE_NAME,
@@ -130,3 +130,5 @@ export class AirtableMetadata {
 //   'lastModifiedTime',
 //   'phoneNumber'
 // ];
+
+module.exports.AirtableMetadata = AirtableMetadata;
